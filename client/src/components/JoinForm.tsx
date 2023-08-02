@@ -4,6 +4,7 @@ import { v4 as uuidv4 } from "uuid";
 import { useNavigate } from "react-router-dom";
 import { Toaster, toast } from "react-hot-toast";
 import { AppLogo } from ".";
+import { getRandomColor } from "../utils/random-color-generate";
 // import { toast } from "react-hot-toast/headless";
 
 export default function JoinForm() {
@@ -57,6 +58,7 @@ export default function JoinForm() {
 
   const handleFormSubmit = (event: FormEvent<HTMLFormElement>) => {
     event.preventDefault();
+
     // console.log({ username: username, roomId: roomId });
     if (username.length == 0) {
       toast.error("Please ! Enter a username");
@@ -89,7 +91,7 @@ export default function JoinForm() {
           type="text"
           value={username}
           onChange={handleUsernameChange}
-          className="formInputStyle"
+          className="formInputStyle text-sm"
           placeholder="Enter Your Username"
         />
         <input
@@ -97,14 +99,14 @@ export default function JoinForm() {
           value={roomName}
           onChange={handleRoomNameChange}
           maxLength={20}
-          className="formInputStyle"
+          className="formInputStyle text-sm"
           placeholder="Enter Your Room Name"
         />
         <div className="relative">
           <input
             type="text"
             value={roomId}
-            className="formInputStyle"
+            className="formInputStyle text-[13px] md:text-sm"
             onChange={handleRoomIdChange}
             placeholder="Enter your RoomId"
           />

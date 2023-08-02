@@ -1,11 +1,14 @@
 import { AppLogo } from ".";
 import { LuChevronRightSquare, LuLogOut, LuMoon } from "../icons";
+import { ChromePicker } from "react-color";
 
 type SidePanelProps = {
   roomName: string;
   username: string;
   openPanel: boolean;
   handlePanelToggle: () => void;
+  color: string;
+  setColor: (e: string) => void;
 };
 
 export default function SidePanel({
@@ -13,6 +16,8 @@ export default function SidePanel({
   handlePanelToggle,
   username,
   roomName,
+  color,
+  setColor,
 }: SidePanelProps) {
   return (
     <div className="bg-zinc-50 border-l-2 min-h-screen w-[22rem] absolute right-0 top-0 px-4 py-5 flex flex-col">
@@ -28,6 +33,13 @@ export default function SidePanel({
           {roomName}
         </p>
       </span>
+      <div className="w-full flex items-center pt-5">
+        <ChromePicker
+          color={color}
+          onChange={(e) => setColor(e.hex)}
+          className="font-poppins"
+        />
+      </div>
     </div>
   );
 }

@@ -1,5 +1,9 @@
 import { FaPaintBrush } from "react-icons/fa";
-import { HiOutlineCheckCircle, HiOutlineTrash } from "react-icons/hi";
+import {
+  HiOutlineCheckCircle,
+  HiOutlineTrash,
+  HiOutlineCode,
+} from "react-icons/hi";
 import {
   LuCopy,
   LuSettings,
@@ -25,4 +29,5 @@ export {
   LuLogOut,
   LuSunMedium,
   LuMoon,
+  HiOutlineCode,
 };

@@ -19,5 +19,5 @@ body {
 }
 
 .formInputStyle {
-  @apply bg-transparent border-2 w-full outline-none py-2.5 px-2 rounded-md focus:border-opacity-80 border-zinc-400 border-opacity-40 placeholder:text-zinc-300 text-sm;
+  @apply bg-transparent border-2 w-full outline-none py-2.5 px-2 rounded-md focus:border-opacity-80 border-zinc-400 border-opacity-40 placeholder:text-zinc-300;
 }
